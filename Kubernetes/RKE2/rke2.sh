@@ -192,6 +192,9 @@ done
 
 kubectl get nodes -o wide
 
+#Export Config File
+export KUBECONFIG=$HOME/.kube/config
+
 #Step 8: Setup Kube-VIP as LoadBalancer
 #IP range for loadbalancer services to use
 kubectl create configmap -n kube-system kubevip --from-literal range-global=$lbrange
